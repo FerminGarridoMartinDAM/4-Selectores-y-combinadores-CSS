@@ -1,0 +1,41 @@
+/* En este ejemplo le estamos aplicando una serie de reglas a todos los elementos <p/> del documento HTML.
+ */
+
+p {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 800;
+  color: royalblue;
+}
+
+/* En este ejemplo le estamos aplicando una serie de reglas a todos los elementos que contengan la clase “mejores”. */
+.mejores {
+  font-style: italic;
+  color: crimson;
+}
+/* aquí le damos estilo al id = best y al id = worst,!!solo puede haber un elemento con un determinado id. NO PUEDE HABER 2 ELEMENTOS CON EL MISMO ID */
+#best {
+  background-color: crimson;
+}
+#worst {
+  background-color: darkgoldenrod;
+}
+/* aquí por practicar, como habíamos estilado <p> anteriormente , he cambiado code que se encontraba dentro de una <p> para que tuviera otro color y otro tamaño */
+code {
+  font-weight: 1em;
+  color: black;
+}
+
+
+/* En este ejemplo le estamos aplicando una regla diferente a los diferentes anchor’s especificando su atributo href y su distinto valor, pudiendo variar el color dependiendo del valor del atributo. */
+
+a[href="www.google.com"] {
+  color: blue;
+}
+
+a[href="www.twitter.com"] {
+  color: aqua;
+}
+
+a[href="www.github.com"] {
+  color: purple;
+}

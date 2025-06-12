@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="descripción" content="Tema 4 selectores y combinadores CSS" />
+    <meta name="keyword" content="Tema4 Selectores combinadores CSS" />
+    <meta name="author" content="Fermín Garrido Martín" />
+    <link
+      rel="stylesheet"
+      4
+      href="4.Selectores y combinadores CSS.css"
+    />
+
+    <title>4 Selectores y combinadores</title>
+  </head>
+  <body>
+    <main>
+      <article>
+        <h2>Selectores básicos</h2>
+        <h3>Selectores básicos: Selectores de tipo o etiqueta</h3>
+        <h4>
+          Este selector definirá todos los elementos coincidentes en base a un
+          nombre de etiqueta, a los cuales se le aplicarán las reglas
+          correspondientes.
+        </h4>
+        <div>
+          <p>Batman:The Killing Joke</p>
+          <p>Batman:The Long Hallowen</p>
+          <p>Batman:Under the Red Hood</p>
+        </div>
+
+        <h3>Selectores básicos: Selector de clase</h3>
+        <h4>
+          Este selector define todos los elementos que contengan el valor
+          coincidente en su atributo clase. La sintaxis de este selector se
+          compondrá con el carácter "." más el nombre de la clase.
+        </h4>
+        <div>
+          <ul>
+            <li class="mejores">Ejemplo 1 con clase "mejores"</li>
+            <li class="mejores">Ejemplo 2 con clase "mejores"</li>
+            <li class="mejores">Ejemplo 3 con clase "mejores"</li>
+            <li>Ejemplo 4</li>
+            <li>Ejemplo 5</li>
+            <li class="mejores">Ejemplo 6 con clase "mejores"</li>
+          </ul>
+        </div>
+
+        <h3>Selectores básicos: Selector de id</h3>
+        <h4>
+          Este selector define un elemento que contenga el valor coincidente en
+          su atributo id. A nivel semántico, en nuestro documento solo puede
+          haber un solo elemento con un determinado id. La sintaxis de este
+          selector se compondrá con el carácter ‘#’ más el nombre del id.
+        </h4>
+        <div>
+          <ol>
+            <li id="best">Chris Claremont</li>
+            <li>Peter David</li>
+            <li>Alan Moore</li>
+            <li>Grant Morrison</li>
+            <li>Geoff Johns</li>
+            <li id="worst">Neil Gaiman</li>
+          </ol>
+        </div>
+      </article>
+
+      <article>
+        <h2>Selectores avanzados</h2>
+        <h4>
+          En selectores avanzados contemplaremos los métodos para definir a qué
+          elementos aplicarles reglas de CSS en base a sus atributos o
+          seleccionar todos los elementos del documento con restricciones
+          opcionales.
+        </h4>
+
+        <h3>Selectores avanzados: Selector universal</h3>
+        <h4>
+          Este selector nos permitirá definir todos los elementos del documento.
+          La sintaxis de este selector se compondrá con el carácter ' '.
+          Opcionalmente, tras el carácter ' ** ' podremos indicar el nombre de
+          una etiqueta, una clase o un atributo para seleccionar todos los
+          elementos coincidentes en un determinado rango. El selector universal
+          es muy utilizado para resetear los estilos por defecto de todas las
+          etiquetas, ya que muchas de ellas tienen un box-sizing, padding o
+          margin predeterminados
+        </h4>
+        <p>
+          En este ejemplo le estamos aplicando una serie de reglas a todos los
+          elementos del documento HTML.
+          <code>*{ padding: 0; margin: 0; box-sizing: border-box; }</code>
+        </p>
+
+        <h3>Selectores avanzados: Selector de atributo</h3>
+        <h4>
+          Este selector nos permitirá definir todos los elementos del documento
+          que coincidan con un atributo predeterminado. Este selector suele ir
+          precedido del nombre de la etiqueta cuyo atributo denominaremos a
+          través de los caracteres “[ ]” y su valor tras el character “=”.
+        </h4>
+        <div>
+          <a href="www.google.com"> Google</a>
+          <a href="www.twitter.com">Twitter</a>
+          <a href="www.github.com">GitHub</a>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
