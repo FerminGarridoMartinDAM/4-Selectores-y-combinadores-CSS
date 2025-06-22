@@ -6,104 +6,305 @@
     <meta name="descripción" content="Tema 4 selectores y combinadores CSS" />
     <meta name="keyword" content="Tema4 Selectores combinadores CSS" />
     <meta name="author" content="Fermín Garrido Martín" />
-    <link
-      rel="stylesheet"
-      4
-      href="4.Selectores y combinadores CSS.css"
-    />
+    <link rel="stylesheet" 4 href="4.Selectores y combinadores CSS.css" />
 
     <title>4 Selectores y combinadores</title>
   </head>
   <body>
     <main>
-      <article>
-        <h2>Selectores básicos</h2>
-        <h3>Selectores básicos: Selectores de tipo o etiqueta</h3>
-        <h4>
-          Este selector definirá todos los elementos coincidentes en base a un
-          nombre de etiqueta, a los cuales se le aplicarán las reglas
-          correspondientes.
-        </h4>
-        <div class="Bataman">
-          <p>Batman:The Killing Joke</p>
-          <p>Batman:The Long Hallowen</p>
-          <p>Batman:Under the Red Hood</p>
+      <article class="Tema4 Selectores y combinadores CSS">
+        <div>
+          <h1>Selectores y combinadores</h1>
+          <p class="definicion">
+            En CSS, los <strong>SELECTORES</strong> son patrones que se utilizan
+            para seleccionar los elementos HTML a los que se les aplicarán
+            estilos. Los <strong>COMBINADORES</strong>, por otro lado, son
+            caracteres o palabras que se utilizan para definir la relación entre
+            los elementos seleccionados.
+          </p>
         </div>
 
-        <h3>Selectores básicos: Selector de clase</h3>
-        <h4>
-          Este selector define todos los elementos que contengan el valor
-          coincidente en su atributo clase. La sintaxis de este selector se
-          compondrá con el carácter "." más el nombre de la clase.
-        </h4>
-        <div class="ejemplos">
-          <ul>
-            <li class="mejores">Ejemplo 1 con clase "mejores"</li>
-            <li class="mejores">Ejemplo 2 con clase "mejores"</li>
-            <li class="mejores">Ejemplo 3 con clase "mejores"</li>
-            <li>Ejemplo 4</li>
-            <li>Ejemplo 5</li>
-            <li class="mejores">Ejemplo 6 con clase "mejores"</li>
+        <article class="Selector">
+          <div class="selectores">
+            <h2>Selectores</h2>
+            <p class="definicion">
+              En CSS, los selectores son patrones que se utilizan para
+              seleccionar los elementos HTML a los que se les aplicarán estilos.
+            </p>
+          </div>
+          <article class="Selectores basicos">
+            <h3>Selectores básicos</h3>
+            <div class="Selectores de tipo o etiqueta">
+              <h4>Selectores básicos: Selectores de tipo o etiqueta</h4>
+              <p class="definicion">
+                Este selector definirá todos los elementos coincidentes en base
+                a un nombre de etiqueta, a los cuales se le aplicarán las reglas
+                correspondientes.
+              </p>
+              <div class="Bataman">
+                <p>Batman:The Killing Joke</p>
+                <p>Batman:The Long Hallowen</p>
+                <p>Batman:Under the Red Hood</p>
+              </div>
+            </div>
+            <h4>Selectores básicos: Selector de clase</h4>
+            <p class="definicion">
+              Este selector define todos los elementos que contengan el valor
+              coincidente en su atributo clase. La sintaxis de este selector se
+              compondrá con el carácter "." más el nombre de la clase.
+            </p>
+            <div class="ejemplos">
+              <ul>
+                <li class="mejores">Ejemplo 1 con clase "mejores"</li>
+                <li class="mejores">Ejemplo 2 con clase "mejores"</li>
+                <li class="mejores">Ejemplo 3 con clase "mejores"</li>
+                <li>Ejemplo 4</li>
+                <li>Ejemplo 5</li>
+                <li class="mejores">Ejemplo 6 con clase "mejores"</li>
+              </ul>
+            </div>
+            <div class="Selector id">
+              <h4>Selectores básicos: Selector de id</h4>
+              <p class="definicion">
+                Este selector define un elemento que contenga el valor
+                coincidente en su atributo id. A nivel semántico, en nuestro
+                documento solo puede haber un solo elemento con un determinado
+                id. La sintaxis de este selector se compondrá con el carácter
+                ‘#’ más el nombre del id.
+              </p>
+              <div class="Actores">
+                <ol>
+                  <li id="best">Chris Claremont</li>
+                  <li>Peter David</li>
+                  <li>Alan Moore</li>
+                  <li>Grant Morrison</li>
+                  <li>Geoff Johns</li>
+                  <li id="worst">Neil Gaiman</li>
+                </ol>
+              </div>
+            </div>
+          </article>
+
+          <article class="Selectores avanzados">
+            <div class="Selectores avanzados">
+              <h3>Selectores avanzados</h3>
+              <p class="definicion">
+                En selectores avanzados contemplaremos los métodos para definir
+                a qué elementos aplicarles reglas de CSS en base a sus atributos
+                o seleccionar todos los elementos del documento con
+                restricciones opcionales.
+              </p>
+            </div>
+            <div class="Selector universal">
+              <h4>Selectores avanzados: Selector universal</h4>
+              <p class="definicion">
+                Este selector nos permitirá definir todos los elementos del
+                documento. La sintaxis de este selector se compondrá con el
+                carácter ' '. Opcionalmente, tras el carácter ' ** ' podremos
+                indicar el nombre de una etiqueta, una clase o un atributo para
+                seleccionar todos los elementos coincidentes en un determinado
+                rango. El selector universal es muy utilizado para resetear los
+                estilos por defecto de todas las etiquetas, ya que muchas de
+                ellas tienen un box-sizing, padding o margin predeterminados
+              </p>
+              <p>
+                En este ejemplo le estamos aplicando una serie de reglas a todos
+                los elementos del documento HTML.
+                <code>*{ padding: 0; margin: 0; box-sizing: border-box; }</code>
+              </p>
+            </div>
+            <div class="Selector de atributo">
+              <h4>Selectores avanzados: Selector de atributo</h4>
+              <p class="definicion">
+                Este selector nos permitirá definir todos los elementos del
+                documento que coincidan con un atributo predeterminado. Este
+                selector suele ir precedido del nombre de la etiqueta cuyo
+                atributo denominaremos a través de los caracteres “[ ]” y su
+                valor tras el character “=”.
+              </p>
+              <div class="enlaces web">
+                <a href="www.google.com"> Google</a>
+                <a href="www.twitter.com">Twitter</a>
+                <a href="www.github.com">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </article>
+
+        <article class="Combinadores">
+          <!-- El anterior articulo( Selectores lo he dividido con div y este lo voy a dividir con listas que creo que es mas rico a nivel semántico) -->
+
+          <ul class="combinadores css">
+            <h2>Combinadores CSS</h2>
+            <p class="definicion">
+              Los combinadores son unos tipos de selectores que nos proporcionan
+              una relación entre selectores dependiendo de la ubicación, el tipo
+              y los atributos de los elementos del documento. Gracias a estos
+              selectores podremos realizar relaciones en cadena para definir
+              ciertos elementos de documento en un orden o
+              descendencia/ascendencia concreta.
+            </p>
+            <li class="combinador de hermanos adyacentes">
+              <h4>Combinador de hermanos adyacentes</h4>
+              <p class="definicion">
+                Este combinador, cuya sintaxis es el character
+                <strong>“+”</strong>, nos permite seleccionar hermanos
+                adyacentes, es decir, un elemento que sigue directamente al
+                primero y que comparte un elemento padre común. El elemento que
+                se seleccionará será el segundo indicado, utilizando el primero
+                como referencia.
+              </p>
+              <div class="ejemplo">
+                <h5>Hermanos adyacentes ejemplo:</h5>
+                <p class="ejemplo">
+                  En este ejemplo estamos utilizando el elemento “li” que viene
+                  continuación del primer “li”, recuperado a través de la
+                  pseudo-clase “first-of-type”
+                  <code
+                    >li:first-of-type + li { font-style: italic; color: orange;
+                    }
+                  </code>
+                </p>
+                <ul class="hermanos adyacentes">
+                  <li class="hermanos adyacentes">La Comunidad del Anillo</li>
+                  <li class="hermanos adyacentes">
+                    Las Dos Torres (modificado con el comando)
+                  </li>
+                  <li class="hermanos adyacentes">El Retorno del Rey</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="combinador general de hermanos">
+              <h4>Combinador general de hermanos</h4>
+              <p class="definicion">
+                Este combinador, cuya sintaxis es el character “~”, nos permite
+                seleccionar a todos los elementos que sigan al primero (sin
+                necesidad de estar directamente uno detrás del otro) y que
+                compartan el mismo elemento padre. Es muy parecido al combinador
+                de hermanos adyacentes pero nos permitirá recuperar todos los
+                elementos que coincidan con la selección sin necesidad de estar
+                juntos.
+              </p>
+              <div class="ejemplo">
+                <h5>Combinador general de hermanos ejemplo:</h5>
+                <p class="ejemplo">
+                  En este ejemplo vemos como solo se han aplicado los estilos en
+                  el segundo span, ya que es el único precedido por un elemento
+                  p En este caso se ha saltado la etiqueta “hr”, ya que con este
+                  combinador no hay necesidad de que esté precedido directamente
+                  el elemento para poder recuperarlo.
+                  <code>p ~ span { font-style: italic; color: blue; }</code>
+                </p>
+                <span>La Comunidad del Anillo:</span>
+                <p class="ejemplo">
+                  La obra comienza con la noticia de la celebración del 111º
+                  cumpleaños de Bilbo Bolsón en la Comarca. Sin embargo, para
+                  Bilbo esta gran fiesta tenía como motivo principal su partida
+                  hacia su último viaje, producto del deseo de terminar sus días
+                  en paz y tranquilidad. El mago Gandalf, amigo de Bilbo y quien
+                  estaba informado de la decisión del hobbit, también acudió a
+                  la fiesta. Tras el discurso pronunciado por Bilbo, este se
+                  puso su anillo mágico y desapareció ante los sorprendidos
+                  hobbits. Gandalf, que sabía bien lo que acababa de hacer
+                  Bilbo, le encontró en Bolsón Cerrado y allí tuvo una pequeña
+                  discusión con él, ya que se negaba a dejar el anillo junto con
+                  el resto de la herencia a su sobrino Frodo; sin embargo, el
+                  mago acabó convenciéndolo y Bilbo al fin partió. Entonces,
+                  debido a las dudas que le estaba ocasionando el anillo,
+                  Gandalf parte en busca de información sobre él, no sin antes
+                  informar a Frodo de que lo guarde y no lo toque.
+                </p>
+                <hr />
+                <span>Continuará...</span>
+              </div>
+            </li>
+
+            <li class="combinador de hijo">
+              <h4>combinador de hijo</h4>
+              <p class="definicion">
+                Este combinador, cuya sintaxis es el character “>”, selecciona
+                los elementos que son hijos directos del primer elemento. Es de
+                los más utilizados. En este caso, recuperará todos los
+                coincidentes que compartan el mismo padre.
+                <code> .lotr > li { color: green; font-weight: bold; } </code>
+                <code>.hob > li { color: goldenrod; } </code>
+              </p>
+
+              <div class="ejemplo">
+                <h5>combinador de hijo ejemplo:</h5>
+                <p class="ejemplo">
+                  En este caso le estamos indicando con el combinador de hijo
+                  que le aplique ciertas reglas a todos los “li” descendientes
+                  de las clases .lotr y .hob. De esta manera podemos atacar a
+                  todos los elementos de dos padres distintos.
+                </p>
+
+                <ul class="lotr">
+                  <li>La Comunidad del Anillo</li>
+                  <li>Las Dos Torres</li>
+                  <li>El Retorno del Rey</li>
+                </ul>
+                <ul class="hob">
+                  <li>Un Viaje Inesperado</li>
+                  <li>La Desolación de Smaug</li>
+                  <li>La Batalla de los Cinco Ejercitos</li>
+                </ul>
+              </div>
+            </li>
+            <li class="combinador de descendientes">
+              <h4 class="combinador de descendientes">
+                Combinador de descendientes
+              </h4>
+              <p class="definicion">
+                Este combinador, cuya sintaxis es mediante el “espacio”, nos
+                permite seleccionar todos los elementos que son descendientes de
+                un elemento padre común, sin necesidad de ser descendiente
+                directo. También es de los más utilizados.
+              </p>
+              <div class="ejemplo">
+                <h5>combinador de descendientes ejemplo:</h5>
+                <p class="ejemplo">
+                  En este ejemplo estamos seleccionando cualquier elemento span
+                  dentro de la clase .two-towers, sin necesidad que sea directo
+                  o adyacente, pero concretando el scope dentro de la clase
+                  indicada.
+                  <code class="ejemplo">
+                    .two-towers span { color: crimson; font-weight: bold; }
+                  </code>
+                </p>
+                <section class="two-towers">
+                  <p class="two-towers">
+                    Tras internarse en Emyn Muil, <span>Frodo Bolsón</span> y
+                    <span>Sam Gamyi</span> se encuentran con la criatura Gollum,
+                    que intenta quitarles el Anillo por la fuerza pero, al verse
+                    vencido, promete a los hobbits guiarlos hasta
+                    <span>Mordor</span>. Tras sacarlos de Emyn Muil y atravesar
+                    la Ciénaga de los Muertos, llegan al Morannon, la «Puerta
+                    Negra» de Mordor. No obstante, la gran protección que tiene
+                    les imposibilita entrar por ahí y Gollum les propone tomar
+                    el camino secreto de Cirith Ungol. Durante el viaje, se
+                    encuentran con una tropa avanzada de montaraces de Gondor
+                    dirigida por Faramir, hijo del senescal de Gondor y hermano
+                    de Boromir, quien los toma como prisioneros y descubre que
+                    portan el <span>Anillo Único</span>. Faramir cuenta a los
+                    hobbits que Boromir ha muerto y que fue encontrado en un
+                    bote élfico. Esto hace pensar a Frodo, pues creía que
+                    Boromir solo quería el Anillo, y por su hermano descubre que
+                    murió protegiendo a la Compañía, tal y como habían jurado
+                    todos sus miembros al salir de Rivendel. Faramir decidió
+                    llevarlos ante su padre, pero, a su paso por la derruida
+                    ciudad de Osgiliath, los soldados gondorianos se encuentran
+                    combatiendo a las fuerzas de <span>Sauron</span> conducidas
+                    por algunos Nazgûl. Al darse cuenta del maligno poder del
+                    Anillo sobre Frodo, al que casi captura uno de los Nazgûl,
+                    Faramir decide liberarlos para que completen su misión.
+                  </p>
+                </section>
+              </div>
+            </li>
           </ul>
-        </div>
-
-        <h3>Selectores básicos: Selector de id</h3>
-        <h4>
-          Este selector define un elemento que contenga el valor coincidente en
-          su atributo id. A nivel semántico, en nuestro documento solo puede
-          haber un solo elemento con un determinado id. La sintaxis de este
-          selector se compondrá con el carácter ‘#’ más el nombre del id.
-        </h4>
-        <div class="Actores">
-          <ol>
-            <li id="best">Chris Claremont</li>
-            <li>Peter David</li>
-            <li>Alan Moore</li>
-            <li>Grant Morrison</li>
-            <li>Geoff Johns</li>
-            <li id="worst">Neil Gaiman</li>
-          </ol>
-        </div>
-      </article>
-
-      <article>
-        <h2>Selectores avanzados</h2>
-        <h4>
-          En selectores avanzados contemplaremos los métodos para definir a qué
-          elementos aplicarles reglas de CSS en base a sus atributos o
-          seleccionar todos los elementos del documento con restricciones
-          opcionales.
-        </h4>
-
-        <h3>Selectores avanzados: Selector universal</h3>
-        <h4>
-          Este selector nos permitirá definir todos los elementos del documento.
-          La sintaxis de este selector se compondrá con el carácter ' '.
-          Opcionalmente, tras el carácter ' ** ' podremos indicar el nombre de
-          una etiqueta, una clase o un atributo para seleccionar todos los
-          elementos coincidentes en un determinado rango. El selector universal
-          es muy utilizado para resetear los estilos por defecto de todas las
-          etiquetas, ya que muchas de ellas tienen un box-sizing, padding o
-          margin predeterminados
-        </h4>
-        <p>
-          En este ejemplo le estamos aplicando una serie de reglas a todos los
-          elementos del documento HTML.
-          <code>*{ padding: 0; margin: 0; box-sizing: border-box; }</code>
-        </p>
-
-        <h3>Selectores avanzados: Selector de atributo</h3>
-        <h4>
-          Este selector nos permitirá definir todos los elementos del documento
-          que coincidan con un atributo predeterminado. Este selector suele ir
-          precedido del nombre de la etiqueta cuyo atributo denominaremos a
-          través de los caracteres “[ ]” y su valor tras el character “=”.
-        </h4>
-        <div class="enlaces web">
-          <a href="www.google.com"> Google</a>
-          <a href="www.twitter.com">Twitter</a>
-          <a href="www.github.com">GitHub</a>
-        </div>
+        </article>
       </article>
     </main>
   </body>
